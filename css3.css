@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+
+.logo-img {
+    border-radius: 100%;
+    width: 300px;
+}
+
+hr {
+    border-style: dotted;
+    margin: 25px;
+    padding: 1px;
+    height: 1px;
+    border: transparent;
+    border-top: 7px dotted #dc14ff;
+    width: 50px;
+}
+
+h {
+    font-size: 25px;
+    margin-top: 15px;
+}
