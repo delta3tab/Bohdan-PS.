@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,500,900&amp;subset=cyrillic" rel="stylesheet">
+	<title>Song an Math</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+	<style type="text/css">
+		body {
+			height: 1000px;
+			background-color: #64bf76;
+			text-align: center;
+		}
+
+		input[type=text] {
+			border-radius: 10px;
+			border: black 1px solid;
+		}
+
+		button {
+			border: black 1px solid;
+			border-radius: 10px;
+		}
+
+		button:hover {
+			border: black 1px solid;
+			background-color: #64bf76;
+			transition: 0.3s ease-in-out;
+		}
+
+		input[type=button] {
+			border: black 1px solid;
+			border-radius: 10px;
+		}
+
+		input[type=button]:hover {
+			border: black 1px solid;
+			background-color: #64bf76;
+			transition: 0.3s ease-in-out;
+		}
+
+		input[type=reset] {
+			border: black 1px solid;
+			border-radius: 10px;
+		}
+
+		input[type=reset]:hover {
+			border: black 1px solid;
+			background-color: #64bf76;
+			transition: 0.3s ease-in-out;
+		}
+	</style>
+
+	<script language="JavaScript" type="text/javascript">
+
+		function array1 () {
+			alert("Результат у консолі");
+			let name = "Bohdan";
+			let surname = "Dubchak";
+			if (document.getElementById('do').checked) {
+				let i = 100;
+				do {
+					if ( (i % 3 == 0) && (i % 5 == 0) )
+						console.log(name + ' ' + surname);
+					else
+						if (i % 3 == 0)
+							console.log(name);
+						else
+							if (i % 5 == 0)
+								console.log(surname);
+							else
+								console.log(i);
+							i--;
+				}while (i > 0);
+			}
+			if (document.getElementById('for').checked) {
+				for (let i = 100; i > 0; i--) {
+					if ( (i % 3 == 0) && (i % 5 == 0) )
+						console.log(name + ' ' + surname);
+					else
+						if (i % 3 == 0)
+							console.log(name);
+						else
+							if (i % 5 == 0)
+								console.log(surname);
+							else
+								console.log(i);
+				}
+			}
+		}
+
+		function pirates () {
+			let first = "bottle of beer on the wall";
+			let second = "bottle of beer,";
+			let third = "Take one down, pass it around,";
+			let fourth = "bottle of beer on the wall."
+			let bottle = 99;
+			do {
+				console.log(bottle + first);
+				console.log(bottle + second);
+				console.log(third);
+				bottle --;
+				console.log (bottle + fourth);
+			} while (bottle > 0) 
+		}
+
+		function fibonacci (numb) {
+			let fib = [0, 1];
+			let k = 0;
+			for (let i = 0; k < (numb - 2); i++) {
+				for (let j = 1; k < (numb - 2); j++ ) {
+					let newFib = fib.push(fib[i]+fib[j]);
+					i++;
+					k++;
+				}
+			}
+			console.log(fib);
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<div>
+		<p class="h5">Завдання №2<br>Оберіть тип циклу</p>
+		do<input type="radio" id="do" name="">
+		for<input type="radio" id="for" name=""> <br>
+		<input type="button" value="Click" onclick="array1();">
+	</div>	<br><br>
+
+	<div>
+		<p class="h5">Завдання №3<br>Натисни і текст пісні буде у консолі</p>
+		<input type="button" value="Click" onclick="pirates();"> <br><br>
+	</div>
+
+	<div>
+		<p class="h5">Послідовність Фібоначчі</p>
+		Введіть кількість елементів послідовності<br><input type="number" value="" id="fib">
+		<input type="button" value="Click" onclick="fibonacci(parseInt(document.getElementById('fib').value));"> <br><br>
+	</div>
+
+</body>
+</html>
